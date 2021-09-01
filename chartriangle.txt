@@ -1,0 +1,44 @@
+/*Purpose: To print triangle with give character and size.*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+void printChars(int nChars, char printChar)
+{
+    int countChars = 0;
+
+    while (countChars < nChars)
+    {
+        printf("%c", printChar);
+        countChars++;
+    }
+}
+
+void printTri(int size, char charac) {
+    int i = 1;
+    while (i <= size) {
+        printChars(i, charac);
+        printf("\n");
+        i++;
+    }
+}
+
+void printPic(int size) {
+    while (size>=1) {
+        if (size % 2 == 0) {
+            printTri(size, '+');
+        }
+        else {
+            printTri(size, '.');
+        }
+        size--;
+    }
+}
+
+int main(void) {
+    int size;
+    printf("Enter Triangle Size: ");
+    scanf("%d", &size);
+    printPic(size);
+}
