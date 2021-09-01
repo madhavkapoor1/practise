@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void printChars(int length, char symbol);
+
+int main(void) {
+
+    char sym_1;
+    int size;
+    int row = 1;
+
+    printf("size:");
+    scanf("%i", &size);
+
+    printf("please enter char:");
+    scanf(" %c", &sym_1);
+
+
+        printChars(size, sym_1);
+
+}
+
+void printChars(int length, char symbol){
+
+    int i = 0;
+
+    while(i<length)
+    {
+        printf("%c", symbol);
+        i++;
+
+    }
+
+}
